@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.bodyContainer {
+    max-width: 900px;
+    margin: auto;
+    background-color: #e7e7e7;
+}
+.titleText{
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+}
+.taskHeader {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.taskHeader__headerText {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 0px 20px;
+    background-color: #fff;
+    flex-basis: 100%;
+    margin: 2px 0px;
+}
+.taskHeader__addTask {
+    padding: 10px;
+    background-color: #fff;
+}
+.taskHeader__submitButton {
+    border: 0px;
+    padding: 8px;
+    background-color: teal;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+.taskHeader__addTask--input {
+    flex: 1 1 auto;
+}
+.taskHeader__addTask--submit{
+    flex: 0 1 auto;
+    justify-self: flex-end;
+
+}
+.taskHeader__taskInput {
+    min-width: -webkit-fill-available;
+    padding: 8px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #adadad;
+    border: 1px solid #e7e7e7;
+}
+.taskList {
+    margin-top: 15px;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.taskList__headerText {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 0px 20px;
+    background-color: #fff;
+    flex-basis: 100%;
+    margin: 2px 0px;
+}
+
+.taskList__list {
+    padding: 0px 20px;
+    background-color: #fff;
+    flex-basis: 100%;
+}
+
+.listItem {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 40px minmax(100px, 1fr) 40px;
+    grid-gap: 10px 10px;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+}
+.listItem__taskButton{
+    justify-self: center;
+}
+.taskList__taskCheckbox {
+    background-color: green;
+    border: 0px;
+    color: #fff;
+    padding: 8px;
+}
+.taskList__taskDelete {
+    background-color: red;
+    border: 0px;
+    color: #fff;
+}
