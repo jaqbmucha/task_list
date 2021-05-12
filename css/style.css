@@ -50,7 +50,13 @@ html {
 }
 .taskHeader__addTask--submit{
     flex: 0 1 auto;
-
+}
+@media (max-width: 400px) {
+    .taskHeader__addTask--submit {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto;
+    }
 }
 .taskHeader__taskInput {
     min-width: -webkit-fill-available;
