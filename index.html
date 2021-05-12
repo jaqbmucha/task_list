@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/task.js"></script>
     <title>Simple task list without react</title>
 </head>
 
@@ -34,12 +35,12 @@
     <div class="taskList__headerText">
         <p>Lista zadań</p>
     </div>
-    <div class="taskList__list">
+    <div class="taskList__list js-task">
         <div class="listItem">
-            <div class="listItem__taskButton"><button class="listItem__Button listItem__Button--check">&#10004;</button>
+            <div class="listItem__taskButton"><button class="listItem__Button listItem__Button--check"></button>
             </div>
             <div class="listItem__taskName">
-                <p>Testowe zadanie</p>
+                <p class="listItem__taskText">Testowe zadanie</p>
             </div>
             <div class="listItem__taskButton">
                 <button class="listItem__Button listItem__Button--delete">&#128465;</button>
