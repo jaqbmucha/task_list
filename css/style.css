@@ -12,8 +12,8 @@ html {
     background-color: #e7e7e7;
 }
 .titleText{
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
     font-size: 40px;
 }
 .taskHeader {
@@ -24,8 +24,8 @@ html {
 }
 
 .taskHeader__headerText {
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
     font-size: 20px;
     padding: 0px 20px;
     background-color: #fff;
@@ -33,30 +33,29 @@ html {
     margin: 2px 0px;
 }
 .taskHeader__addTask {
-    padding: 10px;
+    padding: 15px;
     background-color: #fff;
 }
 .taskHeader__submitButton {
     border: 0px;
     padding: 8px;
     background-color: teal;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    color: #fff;
+    color: #e9e9e9;
 }
 .taskHeader__addTask--input {
     flex: 1 1 auto;
 }
 .taskHeader__addTask--submit{
     flex: 0 1 auto;
-    justify-self: flex-end;
 
 }
 .taskHeader__taskInput {
     min-width: -webkit-fill-available;
     padding: 8px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #adadad;
@@ -71,7 +70,7 @@ html {
 }
 
 .taskList__headerText {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 900;
     font-size: 20px;
     padding: 0px 20px;
@@ -97,14 +96,19 @@ html {
 .listItem__taskButton{
     justify-self: center;
 }
-.taskList__taskCheckbox {
+.listItem__Button {
     background-color: green;
+    justify-self: center;
+    width: 30px;
+    height: 30px;
     border: 0px;
-    color: #fff;
-    padding: 8px;
+    color: #e9e9e9;
 }
-.taskList__taskDelete {
+.listItem__Button--delete {
     background-color: red;
-    border: 0px;
-    color: #fff;
+}
+.listItem__taskName {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
 }
