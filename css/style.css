@@ -10,6 +10,7 @@ html {
     max-width: 900px;
     margin: auto;
     background-color: #e7e7e7;
+    padding: 20px;
 }
 .titleText{
     font-family: 'Source Sans Pro', sans-serif;
@@ -51,7 +52,7 @@ html {
 .taskHeader__addTask--submit{
     flex: 0 1 auto;
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .taskHeader__addTask--submit {
         display: flex;
         justify-content: center;
