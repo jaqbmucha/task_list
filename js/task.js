@@ -9,6 +9,9 @@
             done: false,
         },
     ];
+    focusMethod = function getFocus() {
+        document.getElementById("focusField").focus();
+      }
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -63,6 +66,7 @@
                 toggleTaskDone(taskIndex);
             });
         });
+        focusMethod();
 
     };
 
