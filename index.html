@@ -22,15 +22,17 @@
         <h1 class="titleText">Lista zadań</h1>
     </header>
 </body>
+<form class="js-form">
 <section class="taskHeader">
     <div class="taskHeader__headerText">
         <p>Dodaj nowe zadanie</p>
     </div>
-    <div class="taskHeader__addTask taskHeader__addTask--input"><input type="text" class="taskHeader__taskInput"
-            value="Co jest do zrobienia?"></div>
-    <div class="taskHeader__addTask taskHeader__addTask--submit"><button class="taskHeader__submitButton">Dodaj
-            zadanie</button></div>
+        <div class="taskHeader__addTask taskHeader__addTask--input"><input class="taskHeader__taskInput js-newTask"
+                value="Co jest do zrobienia?"></div>
+        <div class="taskHeader__addTask taskHeader__addTask--submit"><button class="taskHeader__submitButton">Dodaj
+                zadanie</button></div>
 </section>
+</form>
 <section class="taskList">
     <div class="taskList__headerText">
         <p>Lista zadań</p>
