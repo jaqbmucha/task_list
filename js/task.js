@@ -9,7 +9,19 @@
             done: false,
         },
     ];
-    
+
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            taskName: newTaskContent,
+        });
+        render();
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+
     const render = () => {
         let htmlString = "";
 
@@ -23,7 +35,7 @@
             <p${task.done ? " class=\"listItem__taskDone\"" : ""}>${task.taskName}</p>
             </div>
             <div class="listItem__taskButton">
-                <button class="listItem__Button listItem__Button--delete">&#128465;</button>
+                <button class="listItem__Button listItem__Button--delete js-remove">&#128465;</button>
             </div>
             </div>
             </div>
@@ -31,25 +43,27 @@
         }
         document.querySelector(".js-task").innerHTML = htmlString;
 
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+
     };
 
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            taskName: newTaskContent,
-        });
-        render();
-    };
 
     const onFormSubmit = (event) => {
-            event.preventDefault();
+        event.preventDefault();
 
-            const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
-            if (newTaskContent === "") {
-                return;
-            }
-            addNewTask(newTaskContent);
-        };
+        if (newTaskContent === "") {
+            return;
+        }
+        addNewTask(newTaskContent);
+    };
 
     const init = () => {
         render();
