@@ -1,13 +1,5 @@
 {
     const tasks = [
-        {
-            taskName: "Pouczyć się kodu JavaScript",
-            done: true,
-        },
-        {
-            taskName: "Zrobić zadanie domowe z kursu YouCode.pl",
-            done: false,
-        },
     ];
     focusMethod = function getFocus() {
         document.getElementById("focusField").focus();
