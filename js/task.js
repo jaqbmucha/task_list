@@ -78,6 +78,7 @@
         const newTaskContent = newTask.value.trim();
 
         if (newTaskContent === "") {
+            resetFormInput(newTask);
             return;
         }
         addNewTask(newTaskContent);
