@@ -1,9 +1,8 @@
 {
-    const tasks = [
-    ];
-    focusMethod = function getFocus() {
+    const tasks = [];
+    focusInput = function getFocus() {
         document.getElementById("focusField").focus();
-      }
+    }
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -37,7 +36,7 @@
                 toggleTaskDone(taskIndex);
             });
         });
-        focusMethod();
+        focusInput();
     };
 
     const render = () => {
@@ -45,18 +44,13 @@
 
         for (const task of tasks) {
             htmlString += `
-            <div class="taskList__list js-task">
-            <div class="listItem">
-            <div class="listItem__taskButton"><button class="listItem__Button listItem__Button--check js-taskDone">${task.done ? "&#10004;" : ""}</button>
-            </div>
-            <div class="listItem__taskName">
-            <p${task.done ? " class=\"listItem__taskDone\"" : ""}>${task.taskName}</p>
-            </div>
-            <div class="listItem__taskButton">
+            <li class="listItem">
+                <button class="listItem__Button listItem__Button--check js-taskDone">${task.done ? "&#10004;" : ""}</button>
+                <span class="listItem__taskName">
+                    <p${task.done ? " class=\"listItem__taskDone\"" : ""}>${task.taskName}</p>
+                </span>
                 <button class="listItem__Button listItem__Button--delete js-taskRemove">&#128465;</button>
-            </div>
-            </div>
-            </div>
+            </li>
             `;
         }
         document.querySelector(".js-task").innerHTML = htmlString;

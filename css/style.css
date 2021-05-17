@@ -7,10 +7,9 @@ html {
 }
 
 .bodyContainer {
-    max-width: 900px;
     margin: auto;
     background-color: #e7e7e7;
-    padding: 20px;
+    padding: 40px;
 }
 
 .titleText {
@@ -30,7 +29,7 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     font-size: 20px;
-    padding: 0px 20px;
+    padding: 20px 20px;
     background-color: #fff;
     flex-basis: 100%;
     margin: 2px 0px;
@@ -56,10 +55,10 @@ html {
 }
 
 .taskHeader__addTask--submit {
-    flex: 0 1 auto;
+    flex: 0 auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
     .taskHeader__addTask--submit {
         display: flex;
         justify-content: center;
@@ -85,20 +84,11 @@ html {
     flex-direction: row;
 }
 
-.taskList__headerText {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-    padding: 0px 20px;
-    background-color: #fff;
-    flex-basis: 100%;
-    margin: 2px 0px;
-}
-
 .taskList__list {
     padding: 0px 20px;
     background-color: #fff;
     flex-basis: 100%;
+    margin: 0px;
 }
 
 .listItem {
@@ -108,10 +98,6 @@ html {
     grid-gap: 10px 10px;
     align-items: center;
     border-bottom: 1px solid #e7e7e7;
-}
-
-.listItem__taskButton {
-    justify-self: center;
 }
 
 .listItem__Button {
@@ -131,7 +117,9 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight: 400;
+    word-break: break-word;
 }
+
 .listItem__taskDone {
     text-decoration: line-through;
 }
