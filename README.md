@@ -4,7 +4,7 @@
 We were instructed to recreate a simple task List using HTML, CSS and JS (using methods we have learned so far). 
 
 ### Step 2
-We need to add transitions (as we have learned). And buttons: one that hide done tasks, and second that mark all of tasks as done.
+We need to add transitions (as we have learned). And buttons: one that hide done tasks, and second that mark all of tasks as done. Bearing that we have to use immunability.
 
 ## You can see it here
 
