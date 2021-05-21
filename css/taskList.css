@@ -21,6 +21,7 @@
     width: 30px;
     height: 30px;
     padding: 0px;
+    transition: 500ms;
 }
 
 .taskList__button:hover {
