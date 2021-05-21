@@ -5,6 +5,7 @@
     max-width: 900px;
     background-color: #e7e7e7;
     padding: 20px;
+    transition: 1s;
 }
 
 .titleText {
