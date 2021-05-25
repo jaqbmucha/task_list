@@ -46,7 +46,7 @@
             htmlString += `
             <li class="taskList__item">
                 <button class="taskList__button js-taskDone">${task.done ? "&#10004;" : ""}</button>
-                <span${task.done ? " class=\"List__taskName--done\"" : ""}>${task.taskName}</span>
+                <span${task.done ? " class=\"list__taskName--done\"" : ""}>${task.taskName}</span>
                 <button class="taskList__button taskList__button--delete js-taskRemove">&#128465;</button>
             </li>
             `;

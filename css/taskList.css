@@ -44,6 +44,6 @@
     background-color: hsl(0, 100%, 35%);
 }
 
-.taskList__taskName--done {
+.list__taskName--done {
     text-decoration: line-through;
 }
