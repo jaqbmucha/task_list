@@ -1,23 +1,32 @@
 {
-    const tasks = [];
+    let tasks = [];
     focusInput = function getFocus() {
         document.getElementById("focusField").focus();
     }
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            taskName: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { taskName: newTaskContent },
+        ];
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1),
+        ];
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        const task = tasks[taskIndex];
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            { ...task, done: !task.done, },
+            ...tasks.slice(taskIndex + 1),
+        ];
         render();
     }
     const bindEvents = () => {
@@ -40,10 +49,10 @@
     };
 
     const render = () => {
-        let htmlString = "";
+        let tasksListHTMLContent = "";
 
         for (const task of tasks) {
-            htmlString += `
+            tasksListHTMLContent += `
             <li class="taskList__item">
                 <button class="taskList__button js-taskDone">${task.done ? "&#10004;" : ""}</button>
                 <span${task.done ? " class=\"list__taskName--done\"" : ""}>${task.taskName}</span>
@@ -51,7 +60,7 @@
             </li>
             `;
         }
-        document.querySelector(".js-task").innerHTML = htmlString;
+        document.querySelector(".js-task").innerHTML = tasksListHTMLContent;
 
         bindEvents();
 
